@@ -64,10 +64,10 @@ const PersistLogin = () => {
                 <Link to="/login">Please login again</Link>.
             </p>
         )
-    } else if (isSuccess && trueSuccess) { //persist: yes, token: yes
+    } else if (isSuccess && trueSuccess) {
         console.log('success')
         content = <Outlet />
-    } else if (token && isUninitialized) { //persist: yes, token: yes
+    } else if (token && isUninitialized) {
         console.log('token and uninit')
         console.log(isUninitialized)
         content = <Outlet />
