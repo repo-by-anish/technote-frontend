@@ -15,6 +15,7 @@ import PersistLogin from "./features/auth/PersistLogin";
 import RequireAuth from "./features/auth/RequireAuth";
 import { ROLES } from "./config/roles";
 import useTitle from "./hooks/useTitle";
+import KnowMore from "./components/KnowMore";
 
 
 
@@ -25,6 +26,7 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Public />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/about" element={<KnowMore />} />
         <Route element={<PersistLogin />}>
           <Route element={<RequireAuth allowedRoles={[...Object.values(ROLES)]} />}>
             <Route element={<Prefetch />}>

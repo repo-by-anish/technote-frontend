@@ -22,7 +22,7 @@ const Public = () => {
                         <h3 className="gen__content">Always choose <span className="highlight">One</span> but <span className="highlight">Best</span> option!</h3>
                         <p className="gen__content-detail">At our school, we are dedicated to providing a high-quality education that prepares our students for success in college, career, and life. We offer a wide range of academic programs, extracurricular activities, and support services to meet the diverse needs and interests of our students.</p>
                         <div className="public__button">
-                            <Link className="arrow__link">Know more <FontAwesomeIcon icon={faArrowCircleRight} /> </Link>
+                            <Link to="/about" className="arrow__link">Know more <FontAwesomeIcon icon={faArrowCircleRight} /> </Link>
                         </div>
 
                     </div>

@@ -220,6 +220,13 @@ hr{
 .welcome a::before {
   content: "➜ "
 }
+li::before {
+  content: "➜ "
+}
+
+li{
+  margin-top: 1rem;
+}
 
 
 
@@ -457,10 +464,22 @@ video {
   .dash-header__nav {
     gap: 0;
   }
+  .public--main__right img {
+    width: 10rem;
+    float: right;
+  }
 
   .icon-button {
     font-size: 1.5rem;
     cursor: pointer;
+  }
+  .highlight{
+    color: var(--BUTTON1);
+    font-size: large;
+    font-weight: 400;
+  }
+  .public__main{
+    display: inline;
   }
 }
 
