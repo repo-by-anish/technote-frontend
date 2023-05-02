@@ -5,25 +5,25 @@ import { selectCurrentToken } from "../features/auth/authSlice"
 const useAuth = () => {
     const token = useSelector(selectCurrentToken)
 
-    let isAdmin = false
-    let isManager = false
-    let status = "Employee"
+    let isHod = false
+    let isTeacher = false
+    let status = "Student"
 
     if (token) {
         const decoded = jwtDecode(token)
         const { username, roles } = decoded.UserInfo
 
-        isManager = roles.includes('Manager')
-        isAdmin = roles.includes('Admin')
+        isTeacher = roles.includes('Teacher')
+        isHod = roles.includes('Hod')
 
-        if (isManager) status = "Manager"
-        if (isAdmin) status = "Admin"
+        if (isTeacher) status = "Teacher"
+        if (isHod) status = "Hod"
 
-        return { username, roles, status, isManager, isAdmin }
+        return { username, roles, status, isTeacher, isHod }
 
     }
 
-    return { username: '', roles: [], isManager, isAdmin, status }
+    return { username: '', roles: [], isTeacher, isHod, status }
 }
 
 export default useAuth

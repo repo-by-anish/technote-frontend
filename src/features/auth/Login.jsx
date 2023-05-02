@@ -9,7 +9,7 @@ import PulseLoader from "react-spinners/PulseLoader";
 import useTitle from '../../hooks/useTitle'
 
 const Login = () => {
-  useTitle("employee login")
+  useTitle("Student login")
   const userRef = useRef()
   const errRef = useRef()
   const [username, setUsername] = useState('')
@@ -67,12 +67,12 @@ const Login = () => {
   const content = (
     <section className='public'>
       <header>
-        <h1>Employee Login</h1>
+        <h1>Login</h1>
       </header>
       <main className='login'>
         <p ref={errRef} className={errClass} aria-live='assertive'>{errMsg}</p>
         <form className='form' onSubmit={handleSubmit} >
-          <label htmlFor="username">Username: </label>
+          <label className='highlight' htmlFor="username">Username: </label>
           <input
             type="text"
             className='form__input'
@@ -83,7 +83,7 @@ const Login = () => {
             autoComplete='off'
             required
           />
-          <label htmlFor="password">Password: </label>
+          <label className='highlight' htmlFor="password">Password: </label>
           <input
             type="password"
             className='form__input'
@@ -93,7 +93,7 @@ const Login = () => {
             required
           />
           <button className='form__submit-button'>Sign In</button>
-          <label htmlFor="persist" className='form__persist'>Trust this device
+          <label htmlFor="persist" className='form__persist highlight'>Trust this device
             <input
               type="checkbox"
               id="persist"

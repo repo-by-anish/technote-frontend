@@ -9,7 +9,7 @@ import useTitle from "../../hooks/useTitle";
 const EditNote = () => {
   useTitle("edit note")
   const {id}=useParams();
-  const {username,isAdmin,isManager}= useAuth()
+  const {username,isHod,isTeacher}= useAuth()
   const {note}=useGetNotesQuery("notesList",{
     selectFromResult: ({data})=>({
       note: data?.entities[id]
@@ -23,7 +23,7 @@ const EditNote = () => {
 
   if (!users?.length||!note) return <PulseLoader color={"FFF"}/>
 
-  if(!isManager&&!isAdmin){
+  if(!isTeacher&&!isHod){
     if(note.username!==username){
       return <p className="errmsg">No Accesss</p>
     }

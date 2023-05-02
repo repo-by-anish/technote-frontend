@@ -8,16 +8,16 @@ const Welcome = () => {
     const date = new Date();
     const today = new Intl.DateTimeFormat("en-US", { dateStyle: "full", timeStyle: "long" }).format(date);
 
-    const { username, isManager, isAdmin } = useAuth()
+    const { username, isTeacher, isHod } = useAuth()
     const content = (
         <section className="welcome">
-            <p>{today}</p>
+            <p className="time">{today}</p>
             <h1>Welcome {username}</h1>
 
             <p><Link to={"/dash/notes"}>View techNotes</Link></p>
             <p><Link to={"/dash/notes/new"}>Add New techNotes</Link></p>
-            {(isManager || isAdmin) && <p><Link to={"/dash/users"}>View User Settings</Link></p>}
-            {(isManager || isAdmin) && <p><Link to={"/dash/users/new"}>Add New User</Link></p>}
+            {(isTeacher || isHod) && <p><Link to={"/dash/users"}>View User Settings</Link></p>}
+            {(isTeacher || isHod) && <p><Link to={"/dash/users/new"}>Add New User</Link></p>}
         </section>
     )
 

@@ -6,7 +6,7 @@ import PulseLoader from "react-spinners/PulseLoader";
 
 const NoteList = () => {
   useTitle("notes")
-  const {username,isManager,isAdmin}=useAuth()
+  const {username,isTeacher,isHod}=useAuth()
 
   const {
     data: notes,
@@ -33,7 +33,7 @@ const NoteList = () => {
 
     let filteredIds;
 
-    if(isManager||isAdmin){
+    if(isTeacher||isHod){
       filteredIds=[...ids]
     }else{
       filteredIds=ids.filter(noteId=> entities[noteId].username===username)

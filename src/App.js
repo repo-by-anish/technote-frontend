@@ -19,7 +19,7 @@ import useTitle from "./hooks/useTitle";
 
 
 function App() {
-  useTitle("Employee Manage")
+  useTitle("Student Manage")
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
@@ -31,7 +31,7 @@ function App() {
               <Route path="dash" element={<DashLayout />}>
                 <Route index element={<Welcome />} />
 
-                <Route element={<RequireAuth allowedRoles={[ROLES.Admin, ROLES.Manager]} />}>
+                <Route element={<RequireAuth allowedRoles={[ROLES.Hod, ROLES.Teacher]} />}>
                   <Route path="users">
                     <Route index element={<UsersLists />} />
                     <Route path=":id" element={<EditUser />} />

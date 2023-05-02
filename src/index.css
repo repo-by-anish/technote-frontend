@@ -10,9 +10,11 @@
 
 :root {
   /* COLORS */
-  --BGCOLOR: #0F172A;
+  --BGCOLOR: #000;
   --BORDER-COLOR: #FFF;
   --COLOR: #FFF;
+  --BUTTON1: #59DFE0;
+  --FOOTERCLR: #D14836;
   --ERROR: firebrick;
   --INACTIVE: lightgray;
   --LINK-COLOR: whitesmoke;
@@ -38,9 +40,9 @@
   text-decoration: underline;
 }
 
-.nowrap {
+/* .nowrap {
   white-space: nowrap;
-}
+} */
 
 .icon-button {
   width: 48px;
@@ -49,6 +51,7 @@
   background-color: transparent;
   border: none;
   color: var(--COLOR);
+  cursor: pointer;
   display: grid;
   place-content: center;
 }
@@ -69,7 +72,6 @@ body {
   min-height: 100vh;
   background-color: var(--BGCOLOR);
   color: var(--COLOR);
-  background-image: url('./img/background.jpg');
   background-size: cover;
   background-position: top right;
   background-blend-mode: multiply;
@@ -112,16 +114,102 @@ a:focus-visible {
   gap: 1rem;
 }
 
+.welcome h1{
+  color: var(--BUTTON1);
+}
+
 .public {
   padding: 1em;
   flex-grow: 1;
 }
 
+.public--main__right {
+  flex: 300px;
+}
+
+.public__header{
+  display: flex;
+  justify-content: space-between;
+  margin-right: 1rem;
+}
+
+.public--main__left {
+  height: 100%;
+  flex: 700px;
+}
+.public__button{
+padding: 2rem;
+}
+.arrow__link {
+  border-radius: 2px;
+  padding: 4px 5px;
+  border: 2px solid var(--BUTTON1);
+}
+.highlight{
+  color: var(--BUTTON1);
+  font-size: large;
+  font-weight: 600;
+}
+
+.welc{
+  font-size: 200%;
+}
+
+.welc span{
+  font-size: 100%;
+}
+
+.gen__content-detail{
+  margin-top: 2rem;
+}
+
+.public--main__right img {
+  width: 17rem;
+}
+
+.public__main {
+  display: flex;
+  justify-content: space-around;
+  /* height: 60vh; */
+}
+
+hr{
+  transform: rotate(90deg);
+  width: 4rem;
+}
+
+.public__footer{
+  height: 10rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--BUTTON1);
+  padding: 0 1rem;
+  margin: 0;
+  padding: 0;
+  color: var(--FOOTERCLR);
+}
+.public__footer a{
+  color: var(--FOOTERCLR);
+}
+
+.p-footer__left{
+  display: flex;
+  justify-content: space-around;
+  width: 20rem;
+  font-size: large;
+  font-weight: 600;
+
+}
+
+.gen__content{
+  padding: 1rem 0;
+}
+
 .public__main,
 .login {
   flex-grow: 1;
-  border-top: 2px solid var(--BORDER-COLOR);
-  border-bottom: 2px solid var(--BORDER-COLOR);
   padding: 1em 0;
 }
 
@@ -132,6 +220,8 @@ a:focus-visible {
 .welcome a::before {
   content: "➜ "
 }
+
+
 
 /* || DASH HEADER, CONTAINER & FOOTER */
 
@@ -168,7 +258,10 @@ a:focus-visible {
   position: sticky;
   bottom: 0;
   z-index: 1;
-  background-color: var(--BGCOLOR);
+  color: var(--FOOTERCLR);
+  font-size: large;
+  font-weight: 600;
+  background-color: var(--BUTTON1);
   padding: 0.5em;
   border-top: 1px solid var(--BORDER-COLOR);
   display: flex;
@@ -250,6 +343,35 @@ tr {
   color: var(--STATUS-COMPLETE);
 }
 
+.time{
+  font-size: 0.8rem;
+  color: var(--FOOTERCLR);
+}
+
+.nav-button{
+  background: none;
+  color: var(--COLOR);
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-right: 1px solid var(--BORDER-COLOR);
+}
+
+
+video {
+  position: absolute; 
+  right: 0; 
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  max-width: 200%; 
+  max-height: 200%;
+  width: auto; 
+  height: auto; 
+  z-index: -100;
+  background-size: cover;
+  overflow: hidden;
+}
 
 /* || FORM - GENERAL */
 
@@ -338,6 +460,7 @@ tr {
 
   .icon-button {
     font-size: 1.5rem;
+    cursor: pointer;
   }
 }
 
