@@ -187,7 +187,7 @@ hr{
   background-color: var(--BUTTON1);
   padding: 0 1rem;
   margin: 0;
-  padding: 0;
+  padding: 0.5rem;
   color: var(--FOOTERCLR);
 }
 .public__footer a{
@@ -234,7 +234,6 @@ li{
 
 .dash-header {
   position: sticky;
-
   top: 0;
   z-index: 1;
   background-color: var(--BUTTON1);
@@ -260,6 +259,13 @@ li{
 .dash-container {
   padding: 0.75em 0.5em 0.5em;
   flex-grow: 1;
+}
+
+.about{
+  padding: 1rem;
+}
+.about li{
+  list-style: none;
 }
 
 .dash-footer {
@@ -478,8 +484,10 @@ input:focus{
     gap: 0;
   }
   .public--main__right img {
-    width: 10rem;
-    float: right;
+    /* width: 10rem;
+    
+    float: right; */
+    display: none;
   }
 
   .icon-button {
