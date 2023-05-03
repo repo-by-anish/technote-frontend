@@ -130,9 +130,15 @@ a:focus-visible {
 .public__header{
   display: flex;
   justify-content: space-between;
-  margin-right: 1rem;
+  background-color: var(--BUTTON1);
+  padding: 0 1rem;
+  align-items: center;
+  height: 6vh;
+  color: var(--FOOTERCLR);
 }
-
+.public__header a{
+  color: var(--FOOTERCLR);
+}
 .public--main__left {
   height: 100%;
   flex: 700px;
@@ -186,7 +192,7 @@ hr{
   justify-content: space-evenly;
   background-color: var(--BUTTON1);
   padding: 0 1rem;
-  margin: 0;
+  margin-top: 1.5rem;
   padding: 0.5rem;
   color: var(--FOOTERCLR);
 }
@@ -379,6 +385,7 @@ video {
   bottom: 0;
   min-width: 100%; 
   min-height: 100%;
+  opacity: 0.3;
   max-width: 200%; 
   max-height: 200%;
   width: auto; 
@@ -391,6 +398,7 @@ video {
   height: 100%;
   position: absolute;
   top: 0;
+  background-color: #59e0e028;
   left: 0;
   z-index: -20;
   overflow: hidden;

@@ -60,56 +60,58 @@ const Login = () => {
   const errClass = errMsg ? "errmsg" : "offscreen"
 
   if (isLoading) {
-    return <PulseLoader color={"FFF"}/>
+    return <PulseLoader color={"FFF"} />
   }
 
 
   const content = (
-    <section className='public'>
-      <header>
-        <h1>Login</h1>
-      </header>
-      <main className='login'>
-        <p ref={errRef} className={errClass} aria-live='assertive'>{errMsg}</p>
-        <form className='form' onSubmit={handleSubmit} >
-          <label className='highlight' htmlFor="username">Username: </label>
-          <input
-            type="text"
-            className='form__input'
-            id='username'
-            ref={userRef}
-            value={username}
-            onChange={handleUserInput}
-            placeholder='Enter Username'
-            autoComplete='off'
-            required
-          />
-          <label className='highlight' htmlFor="password">Password: </label>
-          <input
-            type="password"
-            className='form__input'
-            id='password'
-            onChange={handlePwdInput}
-            value={password}
-            placeholder='Enter Password'
-            required
-          />
-          <button className='form__submit-button'>Sign In</button>
-          <label htmlFor="persist" className='form__persist highlight'>Trust this device
+    <>
+        <header className='public__header'>
+          <h1>Login</h1>
+        </header>
+      <section className='public'>
+        <main className='login'>
+          <p ref={errRef} className={errClass} aria-live='assertive'>{errMsg}</p>
+          <form className='form' onSubmit={handleSubmit} >
+            <label className='highlight' htmlFor="username">Username: </label>
             <input
-              type="checkbox"
-              id="persist"
-              className='form__checkbox'
-              onChange={handleToggle}
-              checked={persist}
+              type="text"
+              className='form__input'
+              id='username'
+              ref={userRef}
+              value={username}
+              onChange={handleUserInput}
+              placeholder='Enter Username'
+              autoComplete='off'
+              required
             />
-          </label>
-        </form>
-      </main>
-      <footer>
-        <Link to='/'>Back to Home</Link>
-      </footer>
-    </section>
+            <label className='highlight' htmlFor="password">Password: </label>
+            <input
+              type="password"
+              className='form__input'
+              id='password'
+              onChange={handlePwdInput}
+              value={password}
+              placeholder='Enter Password'
+              required
+            />
+            <button className='form__submit-button'>Sign In</button>
+            <label htmlFor="persist" className='form__persist highlight'>Trust this device
+              <input
+                type="checkbox"
+                id="persist"
+                className='form__checkbox'
+                onChange={handleToggle}
+                checked={persist}
+              />
+            </label>
+          </form>
+        </main>
+        <footer>
+          <Link to='/'>Back to Home</Link>
+        </footer>
+      </section>
+    </>
   )
 
   return content;

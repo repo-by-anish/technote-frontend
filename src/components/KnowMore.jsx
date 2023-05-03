@@ -6,7 +6,7 @@ const KnowMore = () => {
     return (
         <section>
             <header className="public__header">
-                <Link to="/">Home</Link>
+                <Link className="highlight" to="/">Home</Link>
             </header>
             <p className="welc about">Welcome to our school! <span className="highlight">We are excited to introduce you to all the amazing things our school has to offer.</span></p>
             <ul className="about">

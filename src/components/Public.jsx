@@ -11,11 +11,11 @@ const Public = () => {
 
     const content = (
         <>
-            <section className="public">
                 <header className="public__header">
                     <h1>NPS</h1>
-                    <Link to="/login">Login</Link>
+                    <Link className="highlight"  to="/login">Login</Link>
                 </header>
+            <section className="public">
                 <main className="public__main">
                     <div className="public--main__left">
                         <p className="welc">Welcome to <span className="highlight"> Nodel Public School. A next generation education system.</span></p>
