@@ -46,10 +46,10 @@ const Public = () => {
                 <hr />
 
                 <address className="public__addr">
-                    A. Info Repairs<br />
-                    555 Foo Drive<br />
-                    Foo City, CA 12345<br />
-                    <a href="tel:+15555555555">(555) 555-5555</a>
+                    NPS Burdwan<br />
+                    555 Golapbag <br />
+                    Burdwan City, West Bengal 713104<br />
+                    <a href="tel:+91555555555">(91) 55555-55555</a>
                 </address>
             </footer>
         </>

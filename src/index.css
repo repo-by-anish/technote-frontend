@@ -234,9 +234,11 @@ li{
 
 .dash-header {
   position: sticky;
+
   top: 0;
   z-index: 1;
-  background-color: var(--BGCOLOR);
+  background-color: var(--BUTTON1);
+  color: var(--FOOTERCLR);
   padding: 0 0.5em;
   border-bottom: 1px solid var(--BORDER-COLOR);
 }
@@ -432,6 +434,9 @@ video {
   outline: 1px solid red;
 }
 
+input:focus{
+  outline: none;
+}
 
 .form__checkbox {
   width: 24px;

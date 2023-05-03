@@ -80,6 +80,7 @@ const Login = () => {
             ref={userRef}
             value={username}
             onChange={handleUserInput}
+            placeholder='Enter Username'
             autoComplete='off'
             required
           />
@@ -90,6 +91,7 @@ const Login = () => {
             id='password'
             onChange={handlePwdInput}
             value={password}
+            placeholder='Enter Password'
             required
           />
           <button className='form__submit-button'>Sign In</button>
