@@ -14,8 +14,8 @@ const Welcome = () => {
             <p className="time">{today}</p>
             <h1>Welcome {username}</h1>
 
-            <p><Link to={"/dash/notes"}>View Issues</Link></p>
-            <p><Link to={"/dash/notes/new"}>Add New Issue</Link></p>
+            <p><Link to={"/dash/notes"}>View Queries</Link></p>
+            <p><Link to={"/dash/notes/new"}>Add New Query</Link></p>
             {(isHod) && <p><Link to={"/dash/users"}>View User Settings</Link></p>}
             {(isHod) && <p><Link to={"/dash/users/new"}>Add New User</Link></p>}
         </section>
