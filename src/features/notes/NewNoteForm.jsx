@@ -60,7 +60,7 @@ const NewNoteForm = ({users}) => {
 
             <form className="form" onSubmit={onSaveNoteClicked}>
                 <div className="form__title-row">
-                    <h2>New Note</h2>
+                    <h2>NEW QUERY</h2>
                     <div className="form__action-buttons">
                         <button
                             className="icon-button"
@@ -72,7 +72,7 @@ const NewNoteForm = ({users}) => {
                     </div>
                 </div>
                 <label className="form__label" htmlFor="title">
-                    Title:</label>
+                    RELATED TO:</label>
                 <input
                     className={`form__input ${validTitleClass}`}
                     id="title"
@@ -84,7 +84,7 @@ const NewNoteForm = ({users}) => {
                 />
 
                 <label className="form__label" htmlFor="text">
-                    Text:</label>
+                    QUERY:</label>
                 <textarea
                     className={`form__input form__input--text ${validTextClass}`}
                     id="text"
@@ -94,7 +94,7 @@ const NewNoteForm = ({users}) => {
                 />
 
                 <label className="form__label form__checkbox-container" htmlFor="username">
-                    ASSIGNED TO:</label>
+                    QUERY TO:</label>
                 <select
                     id="username"
                     name="username"
