@@ -7,7 +7,6 @@ const baseQuery = fetchBaseQuery({
     "Access-Control-Allow-Credentials": "true",
     prepareHeaders: (headers, { getState }) => {
         const token = getState().auth.token
-
         if (token) {
             headers.set("authorization", `Bearer ${token}`)
         }

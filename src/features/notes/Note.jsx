@@ -24,7 +24,7 @@ const Note = ({noteId}) => {
                 <td className="table__cell note__status">
                     {
                         note.completed?
-                        <span className="note__status--completed">Completed</span>
+                        <span className="note__status--completed">Solved</span>
                         :<span className="note__status--open">Open</span>
                     }
                 </td>
